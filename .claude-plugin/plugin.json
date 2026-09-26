@@ -1,0 +1,13 @@
+{
+  "name": "pr-evidence",
+  "version": "1.0.0",
+  "description": "Before/after screenshots for UI changes, one snippet for everything else, images hosted on a non-merging pr-assets branch, and a six-section PR body.",
+  "author": {
+    "name": "Aref Mozafari",
+    "url": "https://github.com/ArefMozafari"
+  },
+  "homepage": "https://github.com/ArefMozafari/pr-evidence",
+  "repository": "https://github.com/ArefMozafari/pr-evidence",
+  "license": "MIT",
+  "keywords": ["pull-request", "code-review", "screenshots", "github", "agent-skill"]
+}
