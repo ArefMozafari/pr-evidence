@@ -50,4 +50,7 @@ shared and only the thin manifests are agent-specific.
   and `install`, component inventory lists the skill), Gemini CLI (`extensions install`, then
   `skills list` shows it enabled), `npx skills add` (Codex and Cursor targets), and
   `gh skill install --from-local`.
-- Copilot CLI installs only from GitHub, so it is checked after the first push.
+- After the first push, all five README install commands were re-run against the GitHub
+  repository, including Copilot CLI, which installs only from GitHub. Copilot's direct
+  `plugin install owner/repo` form works but is deprecated, so the README uses its marketplace
+  form.

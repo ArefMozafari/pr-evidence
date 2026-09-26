@@ -46,7 +46,7 @@ Pick the line for your agent.
 | --- | --- |
 | Claude Code | `/plugin marketplace add ArefMozafari/pr-evidence`, then `/plugin install pr-evidence@pr-evidence` |
 | Gemini CLI | `gemini extensions install https://github.com/ArefMozafari/pr-evidence` |
-| GitHub Copilot CLI | `copilot plugin install ArefMozafari/pr-evidence` |
+| GitHub Copilot CLI | `copilot plugin marketplace add ArefMozafari/pr-evidence`, then `copilot plugin install pr-evidence@pr-evidence` |
 | Codex, Cursor, Windsurf, Cline, OpenCode, and more | `npx skills add ArefMozafari/pr-evidence` |
 | Copilot and other agents, through the GitHub CLI | `gh skill install ArefMozafari/pr-evidence` |
 
