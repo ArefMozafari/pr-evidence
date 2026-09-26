@@ -1,7 +1,6 @@
 ---
 name: pr-evidence
-description: How a PR shows its change instead of describing it - before/after screenshots for UI work captured on an emulator with a throwaway account, hosting images on a non-merging pr-assets branch with a fresh path per capture, the one-snippet rule for non-UI changes, and the six-section PR body. Use when opening or drafting a PR or MR, writing a PR description, attaching screenshots, or at the start of any UI-facing unit so the "before" baseline is captured on the base branch first.
-user-invocable: true
+description: How a PR shows its change instead of describing it - before/after screenshots for UI work captured in a clean environment (emulator, simulator, or fresh browser profile) with a throwaway account, hosting images on a non-merging pr-assets branch with a fresh path per capture, the one-snippet rule for non-UI changes, and the six-section PR body. Use when opening or drafting a PR or MR, writing a PR description, attaching screenshots, or at the start of any UI-facing unit so the "before" baseline is captured on the base branch first.
 ---
 
 # PR evidence — show the change, don't describe it
@@ -10,7 +9,8 @@ A reviewer should grasp what moved without reading the diff.
 
 ## What to show
 
-- **UI/UX change → before *and* after screenshots**, same screen, same device, same state.
+- **UI/UX change → before *and* after screenshots**, same screen, same device or viewport, same
+  state.
 - **Everything else → the one short snippet that *is* the change** — the few lines that
   carry it, not a tour of every file.
 
@@ -22,10 +22,11 @@ turns out to be UI-facing after work has started, capture the baseline before go
 
 ## Where to capture
 
-**On an emulator with a throwaway account, never on the real device.** A real device holds
-real sessions, and scrubbing it means destroying them. An emulator starts clean, is
-disposable, and nothing private can leak into a public repo. Keep the *manual* verification
-of the working agreement's §0.4 on the real device — that is about whether it works; this is
+**In a clean environment with a throwaway account, never on your personal device or browser
+profile.** For mobile work that means an emulator or simulator; for web work, a fresh browser
+profile. A personal device holds real sessions, and scrubbing it means destroying them. A clean
+environment starts empty, is disposable, and nothing private can leak into a public repo. Keep
+hands-on testing on a real device where it matters — that is about whether it works; this is
 about what a reviewer sees.
 
 Screenshots are published artifacts. On a **public** repo they carry whatever is on screen —
