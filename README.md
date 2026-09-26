@@ -50,7 +50,36 @@ flowchart TD
 
 ## Example
 
-The screenshots section of a PR written with this skill:
+This README's own redesign in [pull request #3](https://github.com/ArefMozafari/pr-evidence/pull/3),
+laid out the way the skill writes a screenshots section:
+
+<table>
+  <tr>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+  <tr>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/example-before-dark.png">
+        <img src="docs/assets/example-before-light.png" alt="The README before the redesign: a plain heading, two paragraphs, and six long bullet points">
+      </picture>
+    </td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/example-after-dark.png">
+        <img src="docs/assets/example-after-light.png" alt="The README after the redesign: a centered header with status and agent badges above a Rule and Why table">
+      </picture>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary><b>The Markdown behind a screenshots section</b></summary>
+
+<br>
+
+The images live on the repository's non-merging `pr-assets` branch, one fresh folder per capture:
 
 ```markdown
 ## Screenshots
@@ -59,9 +88,11 @@ The screenshots section of a PR written with this skill:
 | --- | --- |
 | ![Before][before] | ![After][after] |
 
-[before]: https://github.com/acme/app/blob/pr-assets/42/1/settings-before.png?raw=true
-[after]: https://github.com/acme/app/blob/pr-assets/42/1/settings-after.png?raw=true
+[before]: https://github.com/ArefMozafari/pr-evidence/blob/pr-assets/3/1/readme-before-light.png?raw=true
+[after]: https://github.com/ArefMozafari/pr-evidence/blob/pr-assets/3/1/readme-after-light.png?raw=true
 ```
+
+</details>
 
 ## Install
 
