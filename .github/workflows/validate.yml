@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v10
+      # setup-uv publishes no floating major tag, so this names the exact release.
+      - uses: astral-sh/setup-uv@v10.2.0
 
       # The reference validator from the Agent Skills spec rejects any frontmatter key other
       # agents would not accept, so a skill that passes here loads everywhere.
