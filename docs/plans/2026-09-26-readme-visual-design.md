@@ -4,8 +4,8 @@ Date: 2026-09-26
 
 ## Goal
 
-Make the README readable at a glance instead of as a wall of text, without adding image files
-that need upkeep.
+Make the README readable at a glance instead of as a wall of text, adding image files only where
+a rendered picture is the point.
 
 ## Decision
 
@@ -25,8 +25,15 @@ that need upkeep.
   were unreadable at phone width.
 - **Manual install and Development sit in collapsed `<details>` blocks**, since most readers
   only need the one-command install.
-- **The Example uses reference-style image links** so its lines fit the code block without
-  horizontal scrolling.
+- **The Example is rendered, not quoted.** A Markdown snippet of a before/after table showed the
+  syntax but not the result, which is the one thing this skill is about. The Example is now a
+  real before/after table built from this README's own redesign (pull request #3): crops of the
+  top of the README at the commit before and the commit after, in light and dark variants that a
+  `<picture>` element switches with the reader's theme. The snippet stays, collapsed, for readers
+  who want the syntax.
+- **README images live in `docs/assets/`, not on `pr-assets`.** The `pr-assets` branch holds
+  evidence for a pull request's review; the README depends on these images permanently, so they
+  belong in the main history with the page that shows them.
 
 ## Deferred
 
