@@ -75,3 +75,11 @@ format with its manifest in `.cursor-plugin/`, next to the Claude Code one.
   repository, including Copilot CLI, which installs only from GitHub. Copilot's direct
   `plugin install owner/repo` form works but is deprecated, so the README uses its marketplace
   form.
+- The Cursor schema check, run locally against `cursor/plugins` commit `ecc249f`, reports both
+  `.cursor-plugin/` files valid and rejects the Claude Code `plugin.json` for its `author.url`.
+- With the Cursor files in place, each agent was checked in a throwaway configuration folder:
+  the Cursor CLI indexed 1 plugin from the pushed branch with `--git-ref`, Claude Code and
+  Copilot CLI installed the plugin from the local checkout, and Gemini CLI installed it from the
+  pushed branch and listed its skill.
+- The Cursor app's route can only be checked once `.cursor-plugin/` is on `main`, the branch the
+  app imported when it indexed 0 plugins.
