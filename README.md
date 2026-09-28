@@ -79,8 +79,8 @@ laid out the way the skill writes a screenshots section:
 
 <table>
   <tr>
-    <th>Before</th>
-    <th>After</th>
+    <th width="50%">Before</th>
+    <th width="50%">After</th>
   </tr>
   <tr>
     <td>
