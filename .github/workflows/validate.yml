@@ -31,3 +31,14 @@ jobs:
       # Gemini CLI ships no offline validator, so this checks the fields its extension loader reads.
       - name: Validate the Gemini CLI extension manifest
         run: jq -e '.name == "pr-evidence" and (.version | type == "string") and (.description | type == "string")' gemini-extension.json
+
+      # Cursor's schemas are pinned to one commit of cursor/plugins, so an upstream change cannot
+      # break this build unannounced.
+      - name: Validate the Cursor plugin and marketplace manifests
+        env:
+          CURSOR_SCHEMAS_URL: https://raw.githubusercontent.com/cursor/plugins/ecc249f1e306fc64ddf83c7bed16cacf7c2239db/schemas
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/plugin.schema.json" "$CURSOR_SCHEMAS_URL/plugin.schema.json"
+          curl -fsSL -o "$RUNNER_TEMP/marketplace.schema.json" "$CURSOR_SCHEMAS_URL/marketplace.schema.json"
+          npx --yes -p ajv-cli@5.0.0 -p ajv-formats@3.0.1 ajv validate --spec=draft7 -c ajv-formats -s "$RUNNER_TEMP/plugin.schema.json" -d .cursor-plugin/plugin.json
+          npx --yes -p ajv-cli@5.0.0 -p ajv-formats@3.0.1 ajv validate --spec=draft7 -c ajv-formats -s "$RUNNER_TEMP/marketplace.schema.json" -d .cursor-plugin/marketplace.json
