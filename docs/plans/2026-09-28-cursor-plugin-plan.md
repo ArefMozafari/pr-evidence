@@ -171,7 +171,7 @@ Observed with `2026.09.26-dd393fe`: the shell only manages marketplaces (`add`, 
 
 - [ ] **Step 3: Find out what each route reads**
 
-`--plugin-dir` loads any folder with a `skills/` directory, manifest or not, so it proves nothing about the manifests. The marketplace routes do: on `main` at `c8c085e`, before any Cursor file existed, `agent plugin marketplace add https://github.com/ArefMozafari/pr-evidence` indexed 1 plugin, so the CLI reads `.claude-plugin/marketplace.json`. The owner's import of the same repository in the app's Customize, From GitHub Repository, indexed 0 plugins. The Cursor manifests are therefore for the app. Remove each test marketplace with `agent plugin marketplace remove <name>`.
+`--plugin-dir` loads any folder with a `skills/` directory, manifest or not, so it proves nothing about the manifests. The marketplace routes do: on `main` at `c8c085e`, before any Cursor file existed, `agent plugin marketplace add https://github.com/ArefMozafari/pr-evidence` indexed 1 plugin, so the CLI reads `.claude-plugin/marketplace.json`. The owner's import of the same repository in the app's Customize, From GitHub Repository, showed no plugin. The Cursor manifests were therefore expected to serve the app; after the merge the app still showed no plugin, which is tracked in #9. Remove each test marketplace with `agent plugin marketplace remove <name>`.
 
 - [ ] **Step 4: Claude Code still installs, in a throwaway config folder**
 
@@ -215,7 +215,7 @@ The row becomes:
 In the Cursor app, open **Customize**, choose **From GitHub Repository**, and paste the repository URL.
 ```
 
-The app imports the default branch only, so this route can be checked only after the merge (Task 6, Step 4).
+The Cursor CLI cannot check this route, so the owner checks it in the app after the merge (Task 6, Step 4). That check failed, so the line was removed again; see #9.
 
 - [ ] **Step 4: Make the Development section match the workflow**
 
