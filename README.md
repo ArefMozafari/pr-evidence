@@ -125,8 +125,11 @@ The images live on the repository's non-merging `pr-assets` branch, one fresh fo
 | ![Claude Code][badge-claude-code] | `/plugin marketplace add ArefMozafari/pr-evidence`<br>`/plugin install pr-evidence@pr-evidence` |
 | ![Gemini CLI][badge-gemini-cli] | `gemini extensions install https://github.com/ArefMozafari/pr-evidence` |
 | ![GitHub Copilot CLI][badge-github-copilot-cli] | `copilot plugin marketplace add ArefMozafari/pr-evidence`<br>`copilot plugin install pr-evidence@pr-evidence` |
-| ![Codex][badge-codex] ![Cursor][badge-cursor] ![Windsurf][badge-windsurf] ![Cline][badge-cline] and more | `npx skills add ArefMozafari/pr-evidence` |
+| ![Cursor][badge-cursor] | `agent plugin marketplace add https://github.com/ArefMozafari/pr-evidence`<br>then `/plugins` in `agent` and install `pr-evidence` |
+| ![Codex][badge-codex] ![Windsurf][badge-windsurf] ![Cline][badge-cline] and more | `npx skills add ArefMozafari/pr-evidence` |
 | ![GitHub CLI][badge-github-cli] for Copilot and other agents | `gh skill install ArefMozafari/pr-evidence` |
+
+In the Cursor app, open **Customize**, choose **From GitHub Repository**, and paste the repository URL.
 
 <details>
 <summary><b>Manual install</b></summary>
@@ -149,13 +152,16 @@ Copy the `skills/pr-evidence` folder into your agent's skills directory:
 <br>
 
 Every push is checked by [`.github/workflows/validate.yml`](.github/workflows/validate.yml).
-To run the same checks locally from the repository root:
+To run the skill and Claude Code checks locally from the repository root:
 
 ```bash
 uvx --from skills-ref==0.1.1 agentskills validate skills/pr-evidence
 claude plugin validate --strict .claude-plugin/marketplace.json
 claude plugin validate --strict .claude-plugin/plugin.json
 ```
+
+The workflow also checks the Gemini manifest's fields and validates the Cursor manifests against
+the JSON schemas Cursor publishes.
 
 </details>
 
