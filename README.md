@@ -22,6 +22,30 @@ one snippet for everything else.
 
 </div>
 
+<table>
+  <tr>
+    <th width="50%">Without the skill</th>
+    <th width="50%">With the skill</th>
+  </tr>
+  <tr>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-without-dark.png">
+        <img src="docs/assets/hero-without-light.png" alt="A pull request description without the skill: a Summary listing the changed files and a ticked Test plan, with no images">
+      </picture>
+    </td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-with-dark.png">
+        <img src="docs/assets/hero-with-light.png" alt="The same pull request's real description with the skill: a Task summary, then a Screenshots table showing the README before and after side by side">
+      </picture>
+    </td>
+  </tr>
+</table>
+
+The same change, [pull request #3](https://github.com/ArefMozafari/pr-evidence/pull/3), written up both ways.
+The right side is an excerpt of its real description, rendered with GitHub's Markdown styles.
+
 ## What it teaches your agent
 
 | Rule | Why |
