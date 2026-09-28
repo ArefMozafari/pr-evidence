@@ -31,6 +31,9 @@ a rendered picture is the point.
   top of the README at the commit before and the commit after, in light and dark variants that a
   `<picture>` element switches with the reader's theme. The snippet stays, collapsed, for readers
   who want the syntax.
+- **The Example's header cells carry `width="50%"`**, which GitHub keeps. Without it the columns
+  size from their header text, "Before" and "After", so the narrower column shows a smaller
+  picture and the cells' vertical centring pushes it down.
 - **README images live in `docs/assets/`, not on `pr-assets`.** The `pr-assets` branch holds
   evidence for a pull request's review; the README depends on these images permanently, so they
   belong in the main history with the page that shows them.
@@ -41,10 +44,8 @@ a rendered picture is the point.
   explained the rules but never showed their payoff at the level of a whole pull request. The
   hero reuses the Example's shape, a two-column `<table>` of `<picture>` elements headed
   "Without the skill" and "With the skill", so both comparisons on the page look alike. The
-  Example stays as it is: it shows the same screenshots at a readable size.
-- **The hero's header cells carry `width="50%"`**, which GitHub keeps. Without it the columns
-  size from their header text, the two frames scale to different heights, and the cells'
-  vertical centring offsets them.
+  Example stays: it shows the same screenshots at a readable size.
+- **The hero's header cells carry `width="50%"` too**, for the same reason as the Example's.
 - **Both frames describe one real change, pull request #3.** The right frame is a verbatim
   excerpt of its description, the Task summary and Screenshots sections. The left frame is the
   same change written the way agents write pull requests without the skill: a Summary listing
@@ -155,6 +156,9 @@ dark files; the stylesheet defines no custom properties to reuse.
   request #3's live description character for character. The four hero images are 960 × 1200
   px. With the hero in place, the README rendered as above is exactly 1280 px and 390 px wide,
   and the two frames line up.
+- The four Example images are all 911 × 735 px. With `width="50%"` on its header cells, the
+  README rendered as above gives the Example two equal columns at 1280 px and at 390 px, and its
+  two pictures the same height and top.
 - A local render cannot show the theme switch: the Markdown API wraps each `<img>` in a link,
   so it is no longer a direct child of `<picture>`, and only github.com's `<themed-picture>`
   script restores the switch. On github.com, in a fresh browser context, the Example's pictures
