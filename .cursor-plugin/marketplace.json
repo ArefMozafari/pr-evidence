@@ -1,0 +1,16 @@
+{
+  "name": "pr-evidence",
+  "owner": {
+    "name": "Aref Mozafari"
+  },
+  "metadata": {
+    "description": "Agent skill that makes every pull request show its change instead of describing it."
+  },
+  "plugins": [
+    {
+      "name": "pr-evidence",
+      "source": "./",
+      "description": "Before/after screenshots for UI changes, one snippet for everything else, images hosted on a non-merging pr-assets branch, and a six-section PR body."
+    }
+  ]
+}
