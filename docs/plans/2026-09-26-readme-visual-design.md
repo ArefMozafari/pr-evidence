@@ -37,6 +37,11 @@ a rendered picture is the point.
 - **README images live in `docs/assets/`, not on `pr-assets`.** The `pr-assets` branch holds
   evidence for a pull request's review; the README depends on these images permanently, so they
   belong in the main history with the page that shows them.
+- **A "More skills" list sits just above the License**, linking review-findings,
+  review-replies, and post-merge-cleanup, which are published as separate repositories with this
+  one's layout. Each of those READMEs lists this skill and the other two in the same place, so the
+  four link to each other without a shared collection repository. The list sits at the end because
+  readers come for this skill; the others are a pointer, not part of its pitch.
 
 ## Hero comparison
 

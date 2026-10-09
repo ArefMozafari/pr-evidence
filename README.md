@@ -163,6 +163,15 @@ the JSON schemas Cursor publishes.
 
 </details>
 
+## More skills
+
+- [review-findings](https://github.com/ArefMozafari/review-findings): report every code review
+  finding in one shape, ready to paste.
+- [review-replies](https://github.com/ArefMozafari/review-replies): answer review comments on your
+  own pull request one thread at a time.
+- [post-merge-cleanup](https://github.com/ArefMozafari/post-merge-cleanup): clean up branches,
+  worktrees, and stale notes once a pull request has merged.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
