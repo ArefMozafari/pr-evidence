@@ -1,5 +1,21 @@
 <div align="center">
 
+<p align="center">
+  <img src="assets/icons/claude.svg" width="30" alt="Claude Code">
+  &nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/openai-white.svg"><img src="assets/icons/openai.svg" width="30" alt="Codex"></picture>
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/icons/googlegemini.svg" width="30" alt="Gemini CLI">
+  &nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/githubcopilot-white.svg"><img src="assets/icons/githubcopilot.svg" width="30" alt="GitHub Copilot"></picture>
+  &nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/cursor-white.svg"><img src="assets/icons/cursor.svg" width="30" alt="Cursor"></picture>
+  &nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/windsurf-white.svg"><img src="assets/icons/windsurf.svg" width="30" alt="Windsurf"></picture>
+  &nbsp;&nbsp;&nbsp;
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/icons/cline-white.svg"><img src="assets/icons/cline.svg" width="30" alt="Cline"></picture>
+</p>
+
 # pr-evidence
 
 **Make every pull request show its change, not describe it.**
